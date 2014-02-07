@@ -1,0 +1,497 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ */
+
+/*this css is responsible for the navigation bar */
+body{
+	background-image:url('/assets/51.jpg'); 
+	background-size:cover;
+}
+
+.px_welcome_content_main{
+	height:500px; 
+	width:1000px; 
+	margin:auto; 
+	margin-top:3%;
+	border-radius:1%; 
+	box-shadow: 10px 10px 5px #999999; 
+	background-color:rgba(0,0,0,0.7);
+	padding:4%;
+}
+
+.px_welcome_content{
+	height:100%;
+	width:100%;
+	clear:both; 
+	margin:auto; 
+	z-index:-1;
+	/*background-image: url('/assets/7.jpg');*/
+		background-color:rgba(255,255,255,0.2); 
+	border-radius: 1%;
+
+}
+.px_welcome_content_design{
+	height:100%; 
+	width:100%; 
+
+	background-color:rgba(255,255,255,0.4);
+	border-radius:55% 1% 55% 1%; 
+	padding-top:0.1%;
+}
+
+.px_welcome_logo{
+	width:440px; 
+	height:245px; 
+	margin:auto; 
+	background-image:url('/assets/logo_final.png');
+	background-repeat:no-repeat;
+	display:block;
+	margin-top:-4%;
+
+}
+
+.px_welcome_tagline{
+	margin:auto;
+	color:white;  
+	width:46%; 
+	font-size:26px;
+	font-family:"tempus sans itc";
+	font-weight: bold;
+}
+.px_welcome_buttons_div{
+	height:15%; 
+	width:35%; 
+	margin:auto;  
+	margin-top:10%;
+	padding-top:2%;
+}
+.px_welcome_button{
+	background-color:rgba(40,40,130,1); 
+	height:60%; 
+	padding-top:12px; 
+	border-radius:5%; 
+	color:white; 
+	width:40%;
+	font-size:25px; 
+	margin:auto; 
+	text-align:center; 
+	display:inline-block;
+	margin-left:6%;
+}
+
+
+
+.px_session_errormsg{
+	height:21px; 
+	color:red; 
+	text-align:center; 
+	font-size:19px;"
+}
+
+.px_session_inputdiv{
+	margin:auto; 
+	margin-top:1%; 
+	margin-bottom:1%;
+	background-color:white; 
+	width:25%; 
+	height:20%; 
+	padding:0.3%;
+	border-radius:5%;
+	text-align:center;
+}
+.px_session_inputfield{
+	border:none; 
+	border-radius:3%;  
+	text-align:center; 
+	width:96%; 
+	font-size:21px;
+}
+
+.px_session_button{
+	background-color:rgba(40,40,130,1); 
+	padding:0.8%;
+	border-radius:5%; 
+	color:white; 
+	width:12%;
+	border:none;
+	font-size:22px; 
+	text-align:center; 
+	margin:auto;
+	margin-left:44%;
+}
+.px_users_maindiv{
+	height:210px; 
+	width:100%; 
+	margin-top:3%; 
+}
+
+.px_user_newdiv{
+	height:100%; 
+	width:60%; 
+	
+	float:left;
+	padding-right:-10%; 
+	font-size:18px;
+}
+.px_user{
+	
+	height:40em; 
+	width:70em;
+	clear:both;
+	margin:auto;
+	background: rgba(0,0,0, 0.4);
+	padding:0.3%;
+}
+
+.px_users_new_input{
+	border:none; 
+	margin-left:48%; 
+	padding:4px; 
+	font-size:20px; 
+	border-radius:5%;
+	margin-top:1%;
+	width:50%;
+}
+
+
+.px_users_newfileupload_division{
+
+	margin-left:51.8%;
+	font-size:18px; 
+	border-radius:5%; 
+	margin:0.5% 0 1% 48% ; 
+	height:15%;
+	padding:2% 0.5% 2% 0.5%;
+	width:50%;
+	background-color:rgba(25,25,25,0.5);	
+}
+.px_users_newfile{
+	display:inline; 
+	margin-left:1%;
+	border:none; 
+	font-size:15px; 
+	width:75%; 
+	margin-left:5%;
+}
+
+.px_users_errordiv{
+	height:200px; 
+	width:40%; 
+	float:left; 
+	
+}
+.px_users_errormsg{
+	margin:2% 0 0 0; 
+	font-size:16px; 
+	color:red;  
+	width:80%;
+}
+
+.px_users_new_submitbutton{
+	background-color:rgba(40,40,130,1); 
+	padding:0.8%;
+	border-radius:5%; 
+	color:white; 
+	width:15%;
+	border:none;
+	font-size:20px; 
+	text-align:center; 
+	margin-left:66.5%; 
+	clear:both;
+	margin-top:0.5%; 
+}
+
+.px_uinfo{
+	
+	margin-top:1%;
+	height:75.5%;
+	width:81%;
+	background: rgba(255, 255, 255, 0.7);
+	font-size:22px;
+	margin-left:18.5%;
+	margin-right:0.5%;
+	overflow: auto;
+	padding-top:2%;
+
+}
+
+.px_home_image_border{
+	/*background-image: url('/assets/imageback.jpg');*/
+	/*background-color:#B8860B;*/
+	background-color:rgba(0,0,0,0.4);
+	height:95%; 
+	width:95%; 
+	padding-top:0.1%;
+	margin:auto;
+	margin-bottom:2%;
+}
+
+.px_home_image_main_div
+{
+	background-color:rgba(0,0,0,0.4);
+	height:85%;
+	width:60%;
+	margin-left:10%;
+	margin-top:4%;
+	border-radius:2%;
+	transform: rotate(-13deg);
+	-webkit-transform: rotate(-13deg); /* Safari and Chrome #502040; */
+	-ms-transform: rotate(-13deg); /* IE 9 */
+	-moz-transform: rotate(-13deg); /* Firefox */
+    -o-transform: rotate(-13deg); /* Opera */
+
+}
+.px_home_image_top{
+	
+	height:20%;
+	width:100%;
+	border-radius:2%;
+}
+.px_home_image_inner{
+	
+	height:56%;
+	width:7.2%;
+	border-radius:10%;
+	display:inline-block;
+	margin:3%;
+	background-color:rgba(0,0,0,0.4);
+/*	background-color:#B8860B; */
+}
+
+.px_home_image_middle{
+	
+	height:60%;
+	width:100%;
+	
+}
+
+.px_home_image_middle_left{
+	background-color:rgba(0,0,0,0.4);
+	height:100%;
+	width:55.2%;
+	display:inline-block;
+	float:left;
+	margin-left:4%;
+}
+
+.px_home_image_middle_right{
+	background-color:rgba(0,0,0,0.4);
+	height:100%;
+	width:27%;
+	display:inline-block;
+	float:right;
+	margin-right:4%;
+	border-radius:5%;
+}
+
+.px_home_image_bottom{
+	
+	height:20%;
+	width:100%;
+}
+
+.px_home_image_description{
+	margin-left:45%; 
+	color:brown; 
+	margin-top:-6%; 
+	font-size:3em; 
+	position:relative; 
+	z-index:1;
+}
+
+
+
+
+.px_header{
+height:15%;
+width:100%;
+margin:auto;
+background: rgba(0,0,0, 0.7); 
+padding-top:2%;
+display:block;
+padding-bottom:0;
+}
+.px_header_logo{
+display:inline;
+margin-left:10%;
+float:left;
+
+}
+.px_header_user_info{
+display:inline;
+float:right;
+width:30em;
+height:7em;
+margin-top:-1.2%;
+margin-right:0.7%;
+
+}
+.px_header_searchpic{
+	height:1.5em; 
+	padding:0.2em; 
+	padding-bottom:0.4em; 
+	margin-top:1.6%; 
+	margin-bottom:0.6%;
+	margin-left:0.5%;
+	float:right;
+	border-radius:10%;
+	background-color:grey;
+
+}
+.px_header_searchbar{
+height:2.5em; 
+width:43%; 
+padding:.5em; 
+float:right;
+
+}
+#px-header_searchbutton{
+	height:27px; 
+	width:27px; 
+	display:inline; 
+	background-image:url(/assets/search1.jpg); 
+	border:none; 
+	border-radius:5%; 
+	padding:2px; 
+	background-repeat:no-repeat;  
+	background-color:#888888;
+}
+.px_header_searchpic:hover{
+	background-color: #aaaaaa;
+}
+.px_header_logoutimg{
+	 border-radius:30%; 
+	 height:35px; 
+	 width:35px; 
+	 float:right; 
+	 margin-right:5%;
+}
+.px_header_uploadimg{
+	 border-radius:30%; 
+	 height:35px; 
+	 width:35px; 
+	 float:right; 
+	 margin-right:5%;
+}
+.px_header_logoutimg:hover{
+background-color:rgba(255,128,128,0.5); 
+}
+.px_header_uploadimg:hover{
+background-color:rgba(128,255,128,0.5); 
+}
+
+
+
+
+
+
+
+.px_uarea{
+	margin:1%;
+	margin-left:0.5%;
+	height:79%;
+	width:17%;
+	float:left;
+	background: rgba(0, 0, 0, 0.7);
+}
+
+
+
+
+.px_udisp_area{
+	margin:5%;
+	height:30%;
+	width:89%;
+	border-radius:2%;
+}
+
+
+
+
+.px_uoptions{
+	height:69%;
+	width:89%;
+	float:left;
+	clear:both;
+	margin:1% 5% 5% 5%;
+	color:white;
+	font-size:18px;
+}
+.px_hitnumber{
+display:block;
+width:90%;
+height:15%;
+background: rgba(50, 255, 50, 0.3);
+margin:auto;
+margin-top:2%;
+font-size:36px;
+color:white;	
+vertical-align:middle;
+border-radius:5%;
+padding-top:8%;
+margin-bottom:11%;
+}
+.px_user_hits{
+background: rgba(0,0,0, 0.8);
+border-radius:15% 15% 15% 15%; 
+height:125%; 
+width:11%; 
+text-align:center; 
+margin:-8.5% 12% 0 0; 
+float:right; 
+font-size:13px;
+
+}
+.px_u_activity_boxes{
+display:block;
+width:80%;
+height:9%;
+background: rgba(255, 255, 255, 0.7);
+margin:auto;
+margin-top:6%;
+font-size:19px;
+text-align:center;
+vertical-align:middle;
+padding-top:3.5%;
+border-radius:10%;
+color:#006633;
+font-weight:100;
+font-family:Georgia, "Times New Roman", Times, serif;
+}
+#px-uprofile_click:hover
+{
+	box-shadow: 5px 5px 5px #505068;
+	color:#505068;
+}
+#px-ufollowing_click:hover
+{
+	box-shadow: 5px 5px 5px #505068;
+	color:#505068;
+}
+#px-ufollowers_click:hover
+{
+	box-shadow: 5px 5px 5px #505068;
+	color:#505068;
+}
+#px-usettings_click:hover
+{
+	box-shadow: 5px 5px 5px #505068;
+	color:#505068;
+}
+#px-uview_click:hover
+{
+	box-shadow: 5px 5px 5px #505068;
+	color:#505068;
+}
+
+
+

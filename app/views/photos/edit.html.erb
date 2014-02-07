@@ -1,0 +1,27 @@
+<%= image_tag @photo.image_url.to_s %>
+  <%= form_for @photo, :html =>{:multipart => true} do |f| %>
+  <% if @photo.errors.any? %>
+      <h2><%= pluralize(@photo.errors.count, "error") %> prohibited this photo from being saved:</h2>
+
+      <ul>
+      <% @photo.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+  <% end %>
+
+  <div class="field">
+    <input id="photo_comment" class ="rounded" placeholder = "detail" name="photo[detail]" size="30" type="text" value="<%=@photo.detail%>" />
+  </div>
+  <div class="field">
+    <input id="photo_tag" name="tag" placeholder = "tag" class ="rounded" size="30" type="text" value="<%=@photo.gettag%>" />
+  </div>
+  <button class="action green" >
+    <span class="label">
+    	 Save
+    </span>
+  </button>
+
+<% end %>
+
+

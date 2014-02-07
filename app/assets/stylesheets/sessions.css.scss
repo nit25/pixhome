@@ -1,0 +1,48 @@
+
+#welcomeinfo{
+	width: 40em;
+	margin-left: auto;
+	margin-right: auto;
+}
+#welcomeword{
+	text-align: center;
+
+	line-height: 2em;
+	width: 8em;
+	height: 2em;
+	margin-left: auto;
+	margin-right: auto;
+
+	font-size: 30px;
+}
+#welcomelogo{
+	width:25em;
+
+	height:10em;
+	background-image:url("logo.png");
+	background-repeat: no-repeat;
+	margin-left: auto;
+	margin-right: auto;
+}
+#signinform{
+	margin-top: 5em;
+	width:20em;
+	margin-left: auto;
+	margin-right: auto;
+}
+#errorimage{
+	width:1004px;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+#mynoticebox{
+	width:245px;
+	height:20px;
+	margin-bottom:20px;
+	margin-left:auto;
+	margin-right:auto;
+	padding:10px;
+	box-shadow: 0px 0px 10px #888888;
+}

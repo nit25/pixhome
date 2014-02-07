@@ -1,0 +1,39 @@
+<%= image_tag "pixome-final.png", :size => '400x200'%>
+  Welcome back to piXome
+
+<%= form_for @photo, :html =>{:multipart => true} do |f| %>
+  <% if @photo.errors.any? %>
+      <h2><%= pluralize(@photo.errors.count, "error") %> prohibited this photo from being saved:</h2>
+
+      <ul>
+      <% @photo.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+  <% end %>
+
+
+ <div class="field" >
+    <input id="photo_comment" placeholder = "detail" name="photo[detail]" size="30" type="text" class="rounded"/>
+  </div>
+  <div class="field">
+    <input id="photo_tag" placeholder = "tag" class = "rounded" name="tag" size="30" type="text"/>
+  </div>
+
+<div class="field">
+
+     
+          <%= f.file_field :image %>
+     
+  </div>
+
+
+  <button class="action green" >
+    <span class="label" >
+         Upload
+    </span>
+  </button>
+
+<% end %>
+
+

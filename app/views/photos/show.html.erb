@@ -1,0 +1,70 @@
+	<%= image_tag @photo.image_url(:detail).to_s, :id => "showimage"%>
+	<p>
+<b>Tag:</b>
+  <%= @photo.gettag %>
+</p>
+	<p>
+<b>Detail:</b>
+  <%= @photo.detail %>
+</p>
+	 <% if @photo.user_id == session[:user_id] %>
+			<a href="/photos/<%=@photo.id%>/edit" class="button blue">
+			Edit
+			</a>	
+			<a href="/photos/<%=@photo.id%>/destroy" class="button red" class="button blue"  >
+			Delete
+			</a>	
+		
+	<% end %>
+
+	<%= form_tag "/comments/new/"+@photo.id.to_s do %>
+
+		  <div class="field">
+            <input id="commentcontent" name="commentcontent" class="roundedbig" placeholder="Leave any comments? " size="30" type="text" />
+        </div> 
+
+       
+        	<a href="https://twitter.com/share" class="twitter-share-button" data-text="I like this picture" data-size="large" data-count="none">Tweet</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+			</script>
+        
+
+		 <% if @photo.user_id == session[:user_id] %>
+		        <div id="ImageDetailBoxCommentMakeBoxButtonExtra" >
+		 <% else %>
+		        <div id="ImageDetailBoxCommentMakeBoxButton" >
+		<% end %>
+        <button class="action green" >
+           	<span class="label">
+           		Comment
+           	</span>
+               
+        </button>
+
+
+
+
+
+		
+    <% end %>
+
+
+
+
+	<% @comments.each do |comment|%>
+		<% @commentUser = User.find_by_id(comment.user_id) %>
+		
+				<%= image_tag @commentUser.image_url(:tinythumb).to_s%>
+		
+			<b><%= @commentUser.username %></b>          said at <%= comment.created_at %>
+		
+			<%= comment.content %>
+		
+	<% end %>
+
+<script>
+	var image = document.getElementById('showimage');
+	offset = (984-image.width)/2
+	image.style.cssText = "position:relative;left:"+offset.toString()+"px;visibility:visible";
+
+</script>

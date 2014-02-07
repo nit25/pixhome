@@ -1,0 +1,231 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>pixome</title>
+<!--<link style="text/css" rel="stylesheet" href="stylesheet.css"/>
+
+<link href="css/bootstrap.min.css" rel="stylesheet">-->
+<%= stylesheet_link_tag('application') %>
+<!-- Start WOWSlider.com HEAD section -->
+
+	<%= javascript_include_tag('application') %>
+	<!-- End WOWSlider.com HEAD section -->
+<style type="text/css">
+
+	@font-face
+{
+font-family:CustomFont;
+src:url(./Imprima-Regular.ttf) format("truetype");
+}
+
+body,html
+{
+	margin:0px;
+	padding:0px;
+	background-color: #8bbe08;
+	background-image: -webkit-gradient(linear, 50.00% 0.00%, 50.00% 100.00%, color-stop( 0% , rgba(255,255,255,1.00)),color-stop( 100% , rgba(145,251,136,0.58)));
+	background-image: -webkit-linear-gradient(270deg,rgba(255,255,255,1.00) 0%,rgba(145,251,136,0.58) 100%);
+	background-image: linear-gradient(180deg,rgba(255,255,255,1.00) -10%,rgba(145,251,136,0.58) 100%);	
+}
+
+
+._signup_segment{
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 200;
+	text-transform: capitalize;
+	color: #333;
+	position: relative;
+	display: block;
+	height:550px;
+	width: 100%;
+	
+	
+	
+	-webkit-transition: all;
+	-moz-transition: all;
+	-ms-transition: all;
+	-o-transition: all;
+	
+}
+._signup
+{
+	width: 40%;
+	height: 90%;
+	text-transform: capitalize;
+	float: right;
+	
+	border-radius: 50px;
+	margin-top: 20px;
+	padding-left:0px;
+	}
+
+._form
+{
+	font-family:CustomFont;
+	font-size:35px;
+	color:#6C9;
+	padding-left:20px;
+}
+
+#-name_f
+{
+	display:inline-block;
+	font-family:CustomFont;
+	height:12%;
+	width:38%;
+	font-size:25px;	
+	border-radius:5px;
+	padding:5px
+}
+
+
+#-name_l
+{
+	display:inline-block;
+	font-family:CustomFont;
+	height:12%;
+	width:38%;
+	font-size:25px;	
+	margin-left:4%;
+	border-radius:5px;
+	padding:5px
+	
+}
+
+
+#-pass1
+{
+	display:block;
+	font-family:CustomFont;
+	height:12%;
+	width:82%;
+	font-size:25px;	
+	margin-top:20px;
+		border-radius:5px;
+	padding:5px
+
+}
+#-pass2
+{
+	display:block;
+	font-family:CustomFont;
+	height:12%;
+	width:82%;
+	font-size:25px;	
+	margin-top:20px;
+		border-radius:5px;
+	padding:5px
+
+}
+
+
+#-mail_id
+{
+	display:block;
+	font-family:CustomFont;
+	height:12%;
+	width:82%;
+	font-size:25px;	
+	margin-top:20px;
+		border-radius:5px;
+	padding:5px
+
+}
+
+._bday
+{
+	display:inline-block;
+	font-family:CustomFont;
+	height:13%;
+	width:20%;
+	font-size:20px;	
+	margin-top:20px;
+	padding:5px
+}
+
+._gender
+{
+	display:block;
+	font-family:CustomFont;
+	height:13%;
+	width:20%;
+	font-size:20px;	
+	margin-top:20px;
+	padding:5px
+}
+
+#-month
+{
+	width:20%;
+}
+#-reg
+{
+	width:20%;
+	height:13%;
+	font-family:CustomFont;
+	font-size:24px;
+	margin-top:20px;
+	padding:5px;
+
+border-radius:5px;
+}
+#-reset
+{
+	width:20%;
+	height:13%;
+	font-family:CustomFont;
+	margin-top:20px;
+padding:5px;
+font-size:24px;
+border-radius:5px;
+}
+#wowslider-container1
+{
+float:left;
+width:50%;
+}
+
+
+
+</style>
+
+</head>
+
+
+
+<body >
+
+<div class="px_login">
+	<!--img class="px_logo" src="pixome-final.png"-->
+	<%= image_tag('pixome-final.png', :class => 'px_logo') %> 
+	
+</div>
+<div class="_signup_segment">
+
+<!-- Start WOWSlider.com BODY section -->
+	<div id="wowslider-container1" style="margin:100px 30px 0px -250px; overflow: hidden">
+	<div class="ws_images"><ul>
+<li><%= image_tag('1.jpg', :alt => '1', :title=>'1', :id=>'wows1_0') %></li>
+<li><%= image_tag('10.jpg', :alt => '10', :title=>'10', :id=>'wows1_1') %></li>
+<li><%= image_tag('9.jpg', :alt => '9', :title=>'9', :id=>'wows1_9') %></li>
+<li><%= image_tag('8.jpg', :alt => '8', :title=>'8', :id=>'wows1_8') %></li>
+<li><%= image_tag('7.jpg', :alt => '7', :title=>'7', :id=>'wows1_7') %></li>
+<li><%= image_tag('6.jpg', :alt => '6', :title=>'6', :id=>'wows1_6') %></li>
+<li><%= image_tag('5.jpg', :alt => '5', :title=>'5', :id=>'wows1_5') %></li>
+<li><%= image_tag('4.jpg', :alt => '4', :title=>'4', :id=>'wows1_4') %></li>
+<li><%= image_tag('3.jpg', :alt => '3', :title=>'3', :id=>'wows1_3') %></li>
+<li><%= image_tag('2.jpg', :alt => '2', :title=>'2', :id=>'wows1_2') %></li>
+</ul></div>	<div class="ws_shadow"></div>
+	</div>
+	<%= javascript_include_tag('application') %>
+	<!-- End WOWSlider.com BODY section -->
+
+<div class="_signup">
+<%= yield %>
+</div>
+
+
+</body>
+</html>

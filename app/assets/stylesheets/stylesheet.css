@@ -1,0 +1,38 @@
+/* CSS Document */
+body{
+margin:0;
+/* padding:2%; */
+background-color:#99CCFF;
+}
+*{
+/* border:1px solid black; */
+}
+.px_login{
+height:120px;
+display:block;
+width:100%;
+background-color:#8bbe08;
+margin-top:0px;
+margin-bottom:0px;
+font-size:16px;
+padding:5px;
+padding-left:0px;
+}
+.px_logo{
+margin-top:-5px;
+margin-left: 10%;
+float:left;
+height:120%;
+
+}
+.px_info{
+float:right;
+margin-right:5%;
+padding:15px;
+}
+ul{
+float:left;
+}
+.px_rounded_button{
+border-radius:20%;
+}

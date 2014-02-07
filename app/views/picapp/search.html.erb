@@ -1,0 +1,88 @@
+  <b>
+    Found <%=@users.count.to_s%> users and <%=@photos.count.to_s%> pictures
+  </b>
+
+
+<% @users.each do |user| %>
+  
+   <a href = "/users/<%=user.id%>">
+    
+      <%= image_tag user.image_url(:tinythumb).to_s%>
+    
+    </a>
+    
+    
+    <p>
+    <%= user.username %>
+    </p>
+    
+    <p>
+    <%= user.email %>
+    </p>
+    
+      <a href="/follows/show/<%=user.id%>" class="ddm" >
+                                    <span class="icon icon104">
+                                    </span>
+                                    <span class="label">
+                                        Following <%= "     " + Follow.where(:follower_id => user.id).count.to_s%>
+                                    </span>
+                                </a>
+                                <a href="/follows/present/<%=user.id%>" class="ddm" >
+                                    <span class="icon icon127">
+                                    </span>
+                                    <span class="label">
+                                        Followed by  <%= "     " + Follow.where(:followed_id => user.id).count.to_s%>
+                                    </span>
+                                </a>
+
+
+
+    <% if @user.hasFollowedHim(user.id) %>
+     
+        <a href="/follows/destroy/<%=user.id%>" class="button red" >
+            Unfollow
+        </a>
+      
+    <% else %>
+      
+        <a href="/follows/new/<%=user.id%>" class="button blue" >
+            Follow
+        </a>
+      
+    <% end %>
+
+  
+<% end %>
+
+<br />
+
+  
+        <% if @photos != nil%>
+      <% for @photo in @photos %>
+            <div class = "item">
+                <a href="photos/<%=@photo.id%>">
+                  <div class = "itemimage">
+                  <%= image_tag @photo.image_url(:thumb).to_s %>
+                  </div>
+                </a>
+                 <div class = "iteminnerbox">
+
+                 <a href = "/users/<%=@photo.user_id%>">
+                       <%= image_tag User.find_by_id(@photo.user_id).image_url(:supertinythumb) %>
+                     </a>
+                     <p> <%= User.find_by_id(@photo.user_id).username %></p>
+                    <p> <%= @photo.created_at%></p>
+                </div>
+            </div>
+          <% end %>
+        <% end %>
+
+<script > 
+var $container = $('#container');
+$container.imagesLoaded(function(){
+  $container.masonry({
+    itemSelector : '.item',
+    columnWidth : 240
+  });
+});
+</script>

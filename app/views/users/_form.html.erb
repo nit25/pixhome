@@ -1,0 +1,46 @@
+<div class="px_users_maindiv">
+  <%= form_for(@user) do |f| %>
+     
+          <div class="px_user_newdiv" >
+          <input id="user_username" name="user[username]" value="<%=@user.username%>" placeholder="username"  size="30"type="text" class="px_users_new_input" />
+          <input id="user_email" name="user[email]" value="<%=@user.email%>" placeholder="email" type="text" size="30" class="px_users_new_input"/>
+          <input id="user_password" name="user[password]" placeholder="password" size="30" type="password" class="px_users_new_input"/>
+          <input id="user_password_confirmation" name="user[password_confirmation]" placeholder="confirm password" size="30" type="password" class="px_users_new_input"/>
+          <div class="px_users_newfileupload_division">
+              Avatar  <%= f.file_field :image, :class=>'px_users_newfile', :value => 'Avatar' %>
+          </div>
+          <button class="px_users_new_submitbutton">
+              Save
+          </button>
+      </div>
+
+
+
+
+          <div class="px_users_errordiv">
+                 <% if @user.errors.any? %>
+                <h4 style="margin-top:2%; margin-left:5%;color:red;"><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h4>
+                <ul style="margin-top:-4%;">
+                <% @user.errors.full_messages.each do |msg| %>
+                  <li class="px_users_errormsg"><%= msg %></li>
+                <% end %>
+                </ul>
+                 <% end %>
+          </div>
+     
+
+
+
+
+      
+  <% end %>
+</div>
+
+
+
+
+
+
+
+
+

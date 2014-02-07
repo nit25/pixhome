@@ -1,0 +1,37 @@
+	<b>
+	<%= @user.username %> is following:
+	</b>
+</div>
+
+   <% @follows.each do |follow| %>
+
+   <a href = "/users/<%=follow.getfollowed.id%>">
+      <%= image_tag follow.getfollowed.image_url(:tinythumb).to_s%>
+    </a>
+    
+    <p>
+    <%= follow.getfollowed.username %>
+    </p>
+    </div>
+    <p>
+    <%= follow.getfollowed.email %>
+    </p>
+   
+    <% if User.find_by_id(session[:user_id]).hasFollowedHim(follow.followed_id) %>
+        <a href="/follows/destroy/<%=follow.followed_id%>" class="button red">
+            Unfollow
+        </a>
+      
+    <% else %>
+     
+        <a href="/follows/new/<%=follow.followed_id%>" class="button blue">
+            Follow
+        </a>
+     
+    <% end %>
+
+ 
+<% end %>
+
+<br />
+

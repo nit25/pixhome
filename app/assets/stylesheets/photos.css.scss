@@ -1,0 +1,126 @@
+// Place all the styles related to the Photos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#ImageDetailBox{
+	margin-top:20px;
+	width:984px;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 0px 0px 10px #888888;
+	height:70px;
+	padding:20px;
+}
+#ImageDetailBoxWords{
+	position:relative;
+	float:left;
+	left:20px;
+	width:350px;
+}
+#ImageDetailBoxChangeMakeBox{
+	position:relative;
+	top:-20px;
+	height:80px;
+	padding:10px;
+	width:964px;
+	float:left;
+}
+#ImageDetailBoxChangeMakeBoxButton{
+	position:relative;
+	top:-80px;
+	float:right;
+}
+#ImageDetailBoxCommentMakeBox{
+	padding:10px;
+	width:600px;
+	float:right;
+}
+#ImageDetailBoxCommentMakeBoxInput{
+	float:left;
+	position:relative;
+	top:5px;
+}
+#ImageDetailBoxCommentMakeBoxButton{
+	float:right;
+	position:relative;
+}
+#ImageDetailBoxCommentMakeBoxButtonExtra{
+	float:right;
+	top:-30px;
+	left: -72px;
+	position:relative;
+}
+#tweetbutton{
+	float:right;
+	position:relative;
+	top:6px;
+}
+#ImageDetailBoxCommentEditbutton{
+	float:right;
+}
+
+
+#CommentBox{
+	position: relative;
+	top: 10px;
+	width:1024px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#ListBoxLong{
+	padding: 10px;
+	width:1004px;
+	height:70px;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 0px 0px 10px #888888;
+}
+
+
+#CommentBoxUsername{
+	position: relative;
+	top: -70px;
+	left: 90px;
+	float:left;
+}
+#CommentBoxEmail{
+	font-size: 15px;
+	position: relative;
+	top: -50px;
+	left: -110px;
+}
+
+#showimage{
+	visibility:hidden;
+}
+
+
+input.roundedbig {
+	width:300px;
+	border: 1px solid #ccc;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	font-size: 20px;
+	padding: 4px 7px;
+	outline: 0;
+	-webkit-appearance: none;
+}
+input.roundedbig:focus {
+	border-color: #000000;
+}
+input.rounded {
+	width:250px;
+	border: 1px solid #ccc;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	font-size: 20px;
+	padding: 4px 7px;
+	outline: 0;
+	-webkit-appearance: none;
+}
+input.rounded:focus {
+	border-color: #000000;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pictures</title>
+  
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+
+</head>
+
+<body>
+
+
+    <% if User.find_by_id(session[:user_id]) != nil %>
+        <div class="px_user">
+                <div class="px_header">
+                    <div class="px_header_logo">
+                        <%= image_tag "piXomeLOGO.png", :size => '250x80'%>    
+                    </div>
+                    <div class="px_header_user_info">
+                        <%= form_tag "/search" do %>
+                            <div class="px_header_searchpic">
+                                <button class="action" id="px-header_searchbutton"/>
+                            </div>
+                            <div class="px_header_searchbar">
+                                <input id="searchcontent" name="searchcontent" placeholder="Search for users or pictures" size="30" type="text" style="border-radius:5%; height:2em; text-align:center; display:inline;"/>
+                            </div>
+                        <% end %>
+
+                        <div style=" height:40%; width:100%; clear:both; margin-top:60px; padding-top:1%;">
+                                <div class="px_header_logoutimg">
+                                    <a href="/sessions/destroy">
+                                        <div style="border-radius:100%; height:30px; width:30px; margin-top:6%;float:right; margin-right:10%; background-image:url(/assets/logout4.png);"></div>   
+                                    </a>
+                                </div>
+                                <div class="px_header_uploadimg">
+                                    <a href="/photos/new">
+                                        <div style="border-radius:100%; height:30px; width:30px; margin-top:6%;float:right; margin-right:10%; background-image:url(/assets/upload.png);"></div>   
+                                    </a>
+                                </div>
+                                
+                                
+                                    <p style="font-size:22px; background-color:rgba(255,255,255,0.2);color:white; margin-top:0; padding-top:1%;height:71%; padding-left:2%; border-radius:3%;">
+                                        <a href="/home" style="text-decoration:none; color:white;">
+                                        Welcome 
+                                        <%=User.find_by_id(session[:user_id]).username%> !!!
+                                        </a>
+                                    </p>
+
+
+                                
+
+                        </div>
+                    </div>
+                </div> <!-- div for px_header ends-->
+            
+
+
+                <div class="px_uarea">
+                    
+                        <%= image_tag "piXomeLOGO.png", :class => 'px_udisp_area'%>
+                    
+                    <div class="px_uoptions">
+                        <div class="px_hitnumber">
+                            <div style="position:absolute; float:left; margin-left:2%; text-shadow:maroon;">
+                            1234
+                            </div>
+                            <div class="px_user_hits">
+                             H &nbsp;I&nbsp; T S   
+                            
+                            </div>
+                        </div>
+                        <a href="/users/<%=session[:user_id]%>" style="text-decoration:none;">
+                        <div class="px_u_activity_boxes" id="px-uprofile_click" style="font-size:20px;">HOME</div>
+                        </a>      
+                        <a href="/follows/show/<%=session[:user_id]%>" style="text-decoration:none;">
+                        <div class="px_u_activity_boxes" id="px-ufollowing_click">FOLLOWING <%= "     " + Follow.where(:follower_id => session[:user_id]).count.to_s%></div></a>        
+                        <a href="/follows/present/<%=session[:user_id]%>" style="text-decoration:none;">
+                        <div class="px_u_activity_boxes" id="px-ufollowers_click">FOLLOWERS <%= "     " + Follow.where(:followed_id => session[:user_id]).count.to_s%></div></a>    
+
+                        <div class="px_u_activity_boxes" id="px-usettings_click">SETTINGS</div>     
+                        <div class="px_u_activity_boxes" id="px-uview_click">PIX VIEW</div>     
+                    </div>
+                </div>
+                    
+                <div class="px_uinfo">
+
+    <%end%>
+
+    <% if notice !=nil%>
+    <div id="noticebox" style="margin-left:510px; color:maroon;">
+        <%= notice %>
+    </div>
+    <%end%>
+    
+    <%= yield %>
+
+    </div>
+</div> <!-- div for px_user ends-->
+</body>
+</html>

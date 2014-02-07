@@ -1,0 +1,2 @@
+module PixomeHelper
+end

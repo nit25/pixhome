@@ -1,0 +1,70 @@
+<% if @pictures != nil%>
+    <% for @picture in @pictures do %>        
+        <div class="px_home_image_border">
+    
+            <div class="px_home_image_main_div">
+                
+                <div class="px_home_image_top">
+                  <div class="px_home_image_inner">
+                  </div>
+                  <div class="px_home_image_inner">
+                  </div>
+                  <div class="px_home_image_inner">
+                  </div>
+                  <div class="px_home_image_inner">
+                  </div>
+                  <div class="px_home_image_inner">
+                  </div>
+                  <div class="px_home_image_inner">
+                  </div>
+                  <div class="px_home_image_inner">
+                  </div>
+                </div>
+                
+                <div class="px_home_image_middle">
+                    <div class="px_home_image_middle_left">
+                      <a href="photos/<%=@picture.id%>">
+                          <%= image_tag @picture.image_url(:tinythumb).to_s%>
+                      </a>
+                    </div>
+                    <div class="px_home_image_middle_right">
+                          <a href = "/users/<%=@picture.user_id%>">
+                              <%= image_tag User.find_by_id(@picture.user_id).image_url(:supertinythumb) %>
+                          </a>
+                          <p style="text-align:center; color:white;"> <%= User.find_by_id(@picture.user_id).username %></p>
+                          <p style="text-align:center; color:white; font-size:16px; margin-top:-7%"> <%= @picture.created_at%></p>
+                    </div>
+                </div>
+                
+
+                <div class="px_home_image_bottom">
+                    <div class="px_home_image_inner">
+                    </div>
+                    <div class="px_home_image_inner">
+                    </div>
+                    <div class="px_home_image_inner">
+                    </div>
+                    <div class="px_home_image_inner">
+                    </div>
+                    <div class="px_home_image_inner">
+                    </div>
+                    <div class="px_home_image_inner">
+                    </div>
+                    <div class="px_home_image_inner">
+                    </div>
+                </div>
+            </div>
+            <div class="px_home_image_description"><span>hello</span></div>
+        </div>
+    <% end %>
+<% end %>
+<script > 
+var $container = $('#container');
+$container.imagesLoaded(function(){
+  $container.masonry({
+    itemSelector : '.item',
+    columnWidth : 240
+  });
+});
+</script>
+
