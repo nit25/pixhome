@@ -1,17 +1,17 @@
-	<%= image_tag @photo.image_url(:detail).to_s, :id => "showimage"%>
+	<%= image_tag @photo.image_url(:detail).to_s, :style=>'margin:auto; height:400px; width:600px; display:block;'%>
 	<p>
-<b>Tag:</b>
-  <%= @photo.gettag %>
-</p>
-	<p>
-<b>Detail:</b>
-  <%= @photo.detail %>
-</p>
-	 <% if @photo.user_id == session[:user_id] %>
-			<a href="/photos/<%=@photo.id%>/edit" class="button blue">
-			Edit
-			</a>	
-			<a href="/photos/<%=@photo.id%>/destroy" class="button red" class="button blue"  >
+	<b>Tag:</b>
+  	<%= @photo.gettag %>
+	</p>
+		<p>
+		<b>Detail:</b>
+  	<%= @photo.detail %>
+	</p>
+	 	<% if @photo.user_id == session[:user_id] %>
+				<a href="/photos/<%=@photo.id%>/edit">
+					Edit
+				</a>	
+			<a href="/photos/<%=@photo.id%>/destroy" >
 			Delete
 			</a>	
 		

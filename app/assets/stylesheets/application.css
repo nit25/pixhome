@@ -281,7 +281,37 @@ body{
 	display:inline-block;
 	float:left;
 	margin-left:4%;
+	padding:-3%;
 }
+.px_home_image_show{
+
+height:217px;
+	width:265px;
+
+}
+.pic  {         
+        
+border:2px solid white;
+border-radius:5%;
+float: left;         
+overflow: hidden;  
+padding:3%;                                  
+}
+.tilt a img {  
+-webkit-transition: all 0.5s ease;
+-moz-transition: all 0.5s ease;
+-o-transition: all 0.5s ease;
+-ms-transition: all 0.5s ease;
+transition: all 0.5s ease;
+
+}
+.tilt a img:hover {
+-webkit-transform: rotate(-10deg);
+-moz-transform: rotate(-10deg);
+-o-transform: rotate(-10deg);
+-ms-transform: rotate(-10deg);
+}
+
 
 .px_home_image_middle_right{
 	background-color:rgba(0,0,0,0.4);
@@ -394,7 +424,6 @@ background-color:rgba(128,255,128,0.5);
 
 
 
-
 .px_uarea{
 	margin:1%;
 	margin-left:0.5%;
@@ -409,7 +438,7 @@ background-color:rgba(128,255,128,0.5);
 
 .px_udisp_area{
 	margin:5%;
-	height:30%;
+	height:40%;
 	width:89%;
 	border-radius:2%;
 }
@@ -422,7 +451,7 @@ background-color:rgba(128,255,128,0.5);
 	width:89%;
 	float:left;
 	clear:both;
-	margin:1% 5% 5% 5%;
+	margin:-5% 5% 5% 5%;
 	color:white;
 	font-size:18px;
 }
@@ -438,8 +467,9 @@ color:white;
 vertical-align:middle;
 border-radius:5%;
 padding-top:8%;
-margin-bottom:11%;
+margin-bottom:4%;
 }
+
 .px_user_hits{
 background: rgba(0,0,0, 0.8);
 border-radius:15% 15% 15% 15%; 
@@ -450,6 +480,7 @@ margin:-8.5% 12% 0 0;
 float:right; 
 font-size:13px;
 
+
 }
 .px_u_activity_boxes{
 display:block;
@@ -457,7 +488,7 @@ width:80%;
 height:9%;
 background: rgba(255, 255, 255, 0.7);
 margin:auto;
-margin-top:6%;
+margin-top:3%;
 font-size:19px;
 text-align:center;
 vertical-align:middle;

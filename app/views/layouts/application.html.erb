@@ -59,7 +59,9 @@
 
                 <div class="px_uarea">
                     
-                        <%= image_tag "piXomeLOGO.png", :class => 'px_udisp_area'%>
+
+                    <%= image_tag User.find_by_id(@picture.user_id).image_url(:supertinythumb), :class => 'px_udisp_area' %>
+                    
                     
                     <div class="px_uoptions">
                         <div class="px_hitnumber">

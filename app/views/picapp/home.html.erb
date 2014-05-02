@@ -1,6 +1,6 @@
 <% if @pictures != nil%>
     <% for @picture in @pictures do %>        
-        <div class="px_home_image_border">
+        <div class="px_home_image_border" >
     
             <div class="px_home_image_main_div">
                 
@@ -22,10 +22,12 @@
                 </div>
                 
                 <div class="px_home_image_middle">
-                    <div class="px_home_image_middle_left">
-                      <a href="photos/<%=@picture.id%>">
-                          <%= image_tag @picture.image_url(:tinythumb).to_s%>
-                      </a>
+                    <div class="px_home_image_middle_left" >
+                        <div class="tilt pic">
+                          <a href="photos/<%=@picture.id%>">
+                            <%= image_tag @picture.image, :class => 'px_home_image_show'%>
+                          </a>
+                        </div>
                     </div>
                     <div class="px_home_image_middle_right">
                           <a href = "/users/<%=@picture.user_id%>">
