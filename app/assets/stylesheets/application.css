@@ -8,6 +8,7 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ 
  *= require_self
  */
 
@@ -71,7 +72,6 @@ body{
 	height:15%; 
 	width:35%; 
 	margin:auto;  
-	margin-top:10%;
 	padding-top:2%;
 }
 .px_welcome_button{
@@ -143,11 +143,11 @@ body{
 	font-size:18px;
 }
 .px_user{
-	
+	 position:fixed;
 	height:40em; 
-	width:70em;
+	width:75em;
 	clear:both;
-	margin:auto;
+	margin-left:5%;
 	background: rgba(0,0,0, 0.4);
 	padding:0.3%;
 }
@@ -215,7 +215,7 @@ body{
 	margin-top:1%;
 	height:75.5%;
 	width:81%;
-	background: rgba(255, 255, 255, 0.7);
+	background: rgba(0,0,0,0.6);
 	font-size:22px;
 	margin-left:18.5%;
 	margin-right:0.5%;
@@ -228,7 +228,7 @@ body{
 	/*background-image: url('/assets/imageback.jpg');*/
 	/*background-color:#B8860B;*/
 	background-color:rgba(0,0,0,0.4);
-	height:95%; 
+	height:94%; 
 	width:95%; 
 	padding-top:0.1%;
 	margin:auto;
@@ -237,12 +237,12 @@ body{
 
 .px_home_image_main_div
 {
-	background-color:rgba(0,0,0,0.4);
-	height:85%;
+	background-color:rgba(244,0,0,0.4);
+	height:80%;
 	width:60%;
-	margin-left:10%;
-	margin-top:4%;
-	border-radius:2%;
+	margin-left:3%;
+	margin-top:5%;
+	border-radius:1%;
 	transform: rotate(-13deg);
 	-webkit-transform: rotate(-13deg); /* Safari and Chrome #502040; */
 	-ms-transform: rotate(-13deg); /* IE 9 */
@@ -266,6 +266,18 @@ body{
 	background-color:rgba(0,0,0,0.4);
 /*	background-color:#B8860B; */
 }
+.px_home_image_created{
+	
+	height:52%;
+	width:94%;
+	margin:3%;
+	border-radius:0.5%;
+	font-size:14px;
+	color:white;
+	text-align:right;
+	background-color:rgba(0,0,0,0.4);
+/*	background-color:#B8860B; */
+}
 
 .px_home_image_middle{
 	
@@ -275,24 +287,27 @@ body{
 }
 
 .px_home_image_middle_left{
-	background-color:rgba(0,0,0,0.4);
 	height:100%;
+	background-color:rgba(0,0,0,0.4);
 	width:55.2%;
 	display:inline-block;
 	float:left;
 	margin-left:4%;
-	padding:-3%;
 }
 .px_home_image_show{
-
-height:217px;
-	width:265px;
-
+	margin:3%;
+	height:92%;
+	width:94%;
+	border-radius:2%;
 }
+.px_home_user_image{
+	height:65%;
+	width:80%;
+	margin:5% 10% 2% 10%;
+	border-radius:2%;
+}
+/*
 .pic  {         
-        
-border:2px solid white;
-border-radius:5%;
 float: left;         
 overflow: hidden;  
 padding:3%;                                  
@@ -306,12 +321,12 @@ transition: all 0.5s ease;
 
 }
 .tilt a img:hover {
--webkit-transform: rotate(-10deg);
--moz-transform: rotate(-10deg);
--o-transform: rotate(-10deg);
--ms-transform: rotate(-10deg);
+-webkit-transform: rotate(10deg);
+-moz-transform: rotate(10deg);
+-o-transform: rotate(10deg);
+-ms-transform: rotate(10deg);
 }
-
+*/
 
 .px_home_image_middle_right{
 	background-color:rgba(0,0,0,0.4);
@@ -337,7 +352,10 @@ transition: all 0.5s ease;
 	position:relative; 
 	z-index:1;
 }
-
+.px_home_username{
+	font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+	font-size: 1em;
+}
 
 
 
@@ -441,6 +459,7 @@ background-color:rgba(128,255,128,0.5);
 	height:40%;
 	width:89%;
 	border-radius:2%;
+
 }
 
 
@@ -484,11 +503,11 @@ font-size:13px;
 }
 .px_u_activity_boxes{
 display:block;
-width:80%;
-height:9%;
+width:70%;
+height:7%;
 background: rgba(255, 255, 255, 0.7);
 margin:auto;
-margin-top:3%;
+margin-top:6%;
 font-size:19px;
 text-align:center;
 vertical-align:middle;
@@ -496,6 +515,7 @@ padding-top:3.5%;
 border-radius:10%;
 color:#006633;
 font-weight:100;
+font-size: 12px;
 font-family:Georgia, "Times New Roman", Times, serif;
 }
 #px-uprofile_click:hover

@@ -6,14 +6,12 @@ gem 'rails', '3.2.8'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-group :development do
-	gem 'pg'
-end
 
 group :deployment do
 	gem 'pg'
 	gem 'rails_12factor'
 end
+ 
 
 gem 'rmagick'
 #gem 'rmagick', '=2.13.2.mswin32', :platforms => :mswin

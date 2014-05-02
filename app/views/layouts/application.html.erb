@@ -59,8 +59,8 @@
 
                 <div class="px_uarea">
                     
-
-                    <%= image_tag User.find_by_id(@picture.user_id).image_url(:supertinythumb), :class => 'px_udisp_area' %>
+                    <%= image_tag("imageback.jpg", :alt => "user image", :class => 'px_udisp_area') %>
+                    
                     
                     
                     <div class="px_uoptions">
@@ -74,7 +74,7 @@
                             </div>
                         </div>
                         <a href="/users/<%=session[:user_id]%>" style="text-decoration:none;">
-                        <div class="px_u_activity_boxes" id="px-uprofile_click" style="font-size:20px;">HOME</div>
+                        <div class="px_u_activity_boxes" id="px-uprofile_click">HOME</div>
                         </a>      
                         <a href="/follows/show/<%=session[:user_id]%>" style="text-decoration:none;">
                         <div class="px_u_activity_boxes" id="px-ufollowing_click">FOLLOWING <%= "     " + Follow.where(:follower_id => session[:user_id]).count.to_s%></div></a>        
