@@ -1,28 +1,3 @@
-      <%= image_tag @user.image_url(:supertinythumb).to_s%>
-   
-		 
-  					<%= @user.username %> 
-		
-	
-			
-  				<%= @user.email %>
-			
-	
-			<a href="/follows/show/<%=@user.id%>" class="ddm" >
-                                    <span class="icon icon104">
-                                    </span>
-                                    <span class="label">Following <%= "     " + Follow.where(:follower_id => @user.id).count.to_s%>
-                                    </span>
-                                </a>
-                                <a href="/follows/present/<%=@user.id%>" class="ddm" >
-                                    <span class="icon icon127">
-                                    </span>
-                                    <span class="label">
-                                        Followed by  <%= "     " + Follow.where(:followed_id => @user.id).count.to_s%>
-                                    </span>
-                                </a>
-
-
 	<% if session[:user_id] != @user.id %>
 	 <% if User.find_by_id(session[:user_id]).hasFollowedHim(@user.id) %>
       

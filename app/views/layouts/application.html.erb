@@ -59,10 +59,7 @@
 
                 <div class="px_uarea">
                     
-                    <%= image_tag("imageback.jpg", :alt => "user image", :class => 'px_udisp_area') %>
-                    
-                    
-                    
+                    <%= image_tag @user.image_url().to_s, :class => 'px_udisp_area' %>
                     <div class="px_uoptions">
                         <div class="px_hitnumber">
                             <div style="position:absolute; float:left; margin-left:2%; text-shadow:maroon;">
@@ -90,11 +87,7 @@
 
     <%end%>
 
-    <% if notice !=nil%>
-    <div id="noticebox" style="margin-left:510px; color:maroon;">
-        <%= notice %>
-    </div>
-    <%end%>
+    
     
     <%= yield %>
 
