@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Pictures</title>
+  <title>Pixome</title>
   
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
@@ -78,7 +78,14 @@
                         <a href="/follows/present/<%=session[:user_id]%>" style="text-decoration:none;">
                         <div class="px_u_activity_boxes" id="px-ufollowers_click">FOLLOWERS <%= "     " + Follow.where(:followed_id => session[:user_id]).count.to_s%></div></a>    
 
-                        <div class="px_u_activity_boxes" id="px-usettings_click">SETTINGS</div>     
+                        <% if session[:user_id] == @user.id %>
+    
+                        <a href="/users/<%=@user.id%>/edit" style="text-decoration:none;">
+                        <div class="px_u_activity_boxes" id="px-usettings_click">SETTINGS</div> 
+                        </a>    
+    
+                        <% end %>
+                            
                         <div class="px_u_activity_boxes" id="px-uview_click">PIX VIEW</div>     
                     </div>
                 </div>

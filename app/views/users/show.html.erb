@@ -16,26 +16,17 @@
 
 
 
-	<% if session[:user_id] == @user.id %>
-	
-	<a href="/users/<%=@user.id%>/edit" style="width:40px;text-align:center" class="button green">
-			Edit 
-	</a>	
-	
-	<% end %>
-
-	
-        <% if @pictures != nil%>
-		  <% for @picture in @pictures %>
-            <div class = "item" >
-                <a href="/photos/<%=@picture.id%>">
-                  <div class = "itemimage">
-                  <%= image_tag @picture.image_url(:thumb).to_s %>
-                  </div>
-                </a>
-            </div>
-          <% end %>
-        <% end %>
+    <% if @pictures != nil%>
+      <% for @picture in @pictures %>
+        <div>
+            <a href="/photos/<%=@picture.id%>">
+              <div style="text-align:center;">
+              <%= image_tag @picture.image_url().to_s,:style=>'height:400px; width:600px; margin:2%; margin-top:0; border:30px solid rgba(2,80,2,0.6); border-radius:3%;'%>
+              </div>
+            </a>
+        </div>
+      <% end %>
+    <% end %>
 
 <!--insideboxmiddle-->
 

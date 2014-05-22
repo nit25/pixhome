@@ -1,37 +1,24 @@
-	<b>
-	<%= @user.username %> is following:
-	</b>
-</div>
-
-   <% @follows.each do |follow| %>
-
-   <a href = "/users/<%=follow.getfollowed.id%>">
-      <%= image_tag follow.getfollowed.image_url(:tinythumb).to_s%>
+<div style="margin-top:-2%;">
+  <% @follows.each do |follow| %>
+    <div style="background-color:rgba(102,20,180,0.2); margin-left:8%; height:220px; width:150px; margin-top:2%; display:inline-block; text-align:center; border-radius:2%;">
+    <a href = "/users/<%=follow.getfollowed.id%>">
+      <%= image_tag follow.getfollowed.image_url().to_s, :style=>'height:70%; width:90%; margin:auto; margin-top:5%; border-radius:10%;'%>
     </a>
-    
-    <p>
-    <%= follow.getfollowed.username %>
-    </p>
-    </div>
-    <p>
-    <%= follow.getfollowed.email %>
-    </p>
-   
+
+    <span style="font-size:20px; color:white;"><%= follow.getfollowed.username %></span>
+    <br/>
+    <span>
     <% if User.find_by_id(session[:user_id]).hasFollowedHim(follow.followed_id) %>
-        <a href="/follows/destroy/<%=follow.followed_id%>" class="button red">
+       <a href="/follows/destroy/<%=follow.follower_id%>" style="font-size:17px; color:red; text-decoration:none;">
             Unfollow
         </a>
-      
-    <% else %>
-     
-        <a href="/follows/new/<%=follow.followed_id%>" class="button blue">
+     <% else %>
+        <a href="/follows/new/<%=follow.followed_id%>" style="font-size:17px; color:BLUE; text-decoration:none;">
             Follow
         </a>
-     
     <% end %>
+    </span>
 
- 
-<% end %>
-
-<br />
-
+    </div>
+ <% end %>
+</div>

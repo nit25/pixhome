@@ -1,57 +1,52 @@
-  <b>
+<div style=" display:block;text-align:center; color:white;">
     Found <%=@users.count.to_s%> users and <%=@photos.count.to_s%> pictures
-  </b>
+</div>
+
+<% if @users != nil%>
+   <% @users.each do |user| %>
+      <div style="height:300px; width:500px; margin:auto; margin-top:2%; padding-top:2%; background-color:rgba(255,255,255,0.7); text-align:center;">     
+         <a href = "/users/<%=user.id%>">
+          
+            <%= image_tag user.image_url().to_s, :style=>'height:50%; width:30%; border-radius:2%;'%>
+          
+          </a>
+          <br/>
+          <%= user.username %>
+          <br/>
+          <%= user.email %>
+          <p>   
+            <a href="/follows/show/<%=user.id%>" class="ddm" style="margin-right:2%; text-decoration:none;" >
+                <span class="label">
+                    Following <%= "     " + Follow.where(:follower_id => user.id).count.to_s%>
+                </span>
+            </a>
+            <a href="/follows/present/<%=user.id%>" class="ddm" style="margin-right:2%; text-decoration:none;">
+                <span class="icon icon127">
+                </span>
+                <span class="label">
+                    Followed by  <%= "     " + Follow.where(:followed_id => user.id).count.to_s%>
+                </span>
+            </a>
 
 
-<% @users.each do |user| %>
-  
-   <a href = "/users/<%=user.id%>">
-    
-      <%= image_tag user.image_url(:tinythumb).to_s%>
-    
-    </a>
-    
-    
-    <p>
-    <%= user.username %>
-    </p>
-    
-    <p>
-    <%= user.email %>
-    </p>
-    
-      <a href="/follows/show/<%=user.id%>" class="ddm" >
-                                    <span class="icon icon104">
-                                    </span>
-                                    <span class="label">
-                                        Following <%= "     " + Follow.where(:follower_id => user.id).count.to_s%>
-                                    </span>
-                                </a>
-                                <a href="/follows/present/<%=user.id%>" class="ddm" >
-                                    <span class="icon icon127">
-                                    </span>
-                                    <span class="label">
-                                        Followed by  <%= "     " + Follow.where(:followed_id => user.id).count.to_s%>
-                                    </span>
-                                </a>
+          <% if @user.hasFollowedHim(user.id) %>
+           
+              <a href="/follows/destroy/<%=user.id%>" style="margin-right:2%; text-decoration:none;">
+                  Unfollow
+              </a>
+            
+          <% else %>
+            
+              <a href="/follows/new/<%=user.id%>" style="margin-right:2%; text-decoration:none;">
+                  Follow
+              </a>
+            
+          <% end %>
 
-
-
-    <% if @user.hasFollowedHim(user.id) %>
-     
-        <a href="/follows/destroy/<%=user.id%>" class="button red" >
-            Unfollow
-        </a>
-      
-    <% else %>
-      
-        <a href="/follows/new/<%=user.id%>" class="button blue" >
-            Follow
-        </a>
-      
-    <% end %>
-
-  
+        </p>
+      </div>  
+     <% end %>
+    
 <% end %>
 
 <br />
@@ -59,23 +54,16 @@
   
         <% if @photos != nil%>
       <% for @photo in @photos %>
-            <div class = "item">
+            <div style="height:300px; width:500px; margin:auto; margin-top:2%; padding-top:1.8%; background-color:rgba(255,255,255,0.7); text-align:center;">
                 <a href="photos/<%=@photo.id%>">
-                  <div class = "itemimage">
-                  <%= image_tag @photo.image_url(:thumb).to_s %>
-                  </div>
+                  <%= image_tag @photo.image_url().to_s, :style=>'width:95%; height:95%;' %>
                 </a>
-                 <div class = "iteminnerbox">
-
-                 <a href = "/users/<%=@photo.user_id%>">
-                       <%= image_tag User.find_by_id(@photo.user_id).image_url(:supertinythumb) %>
-                     </a>
-                     <p> <%= User.find_by_id(@photo.user_id).username %></p>
-                    <p> <%= @photo.created_at%></p>
-                </div>
+                 
+                
             </div>
           <% end %>
         <% end %>
+</div>
 
 <script > 
 var $container = $('#container');
